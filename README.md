@@ -1,10 +1,10 @@
 # Rewriting the README file after reset
-readme_content = """
+
 # **Scylla-ORM**
 
 Scylla-ORM is a lightweight and flexible ORM for ScyllaDB, built using **GoCQL**. It simplifies interaction with ScyllaDB, supporting features like **basic CRUD operations**, **batch queries**, **WHERE conditions**, **ALLOW FILTERING**, and **migrations**.
 
----
+
 
 ## **Features**
 
@@ -16,7 +16,7 @@ Scylla-ORM is a lightweight and flexible ORM for ScyllaDB, built using **GoCQL**
 - **TTL Support**: Set time-to-live for records in `INSERT` and `UPDATE`.
 - **Logging**: Logs queries and parameters for better debugging.
 
----
+
 
 ## **Installation**
 
@@ -46,7 +46,7 @@ session := orm.NewSession(
 defer session.Close()
 ```
 
----
+
 ## **2. Migrations**
 
 To create or modify tables:
@@ -71,7 +71,7 @@ if err := migration.Run(migrations); err != nil {
 }
 ```
 
----
+
 ## **3. CRUD Operations**
 
 ### Insert a Record
@@ -121,7 +121,7 @@ if err := db.Where("id = ?", someUUID).Delete(); err != nil {
 }
 ```
 
----
+
 ## **4. Batch Queries**
 
 Execute multiple operations in a single batch:
@@ -151,7 +151,7 @@ if err := batch.Execute(); err != nil {
 }
 ```
 
----
+
 ## **5. TTL Support**
 
 Set TTL (time-to-live) for records:
@@ -176,7 +176,7 @@ db.Where("name = ?", "Eve").
     }, 5) // TTL: 5 seconds
 ```
 
----
+
 ## **6. Logging**
 
 Scylla-ORM logs queries and parameters for better debugging:
@@ -185,14 +185,14 @@ Scylla-ORM logs queries and parameters for better debugging:
 orm.QueryLogger.Log("SELECT * FROM users WHERE age > ?", 25)
 ```
 
----
+
 # Contributing
 Contributions are welcome! Please submit a pull request with changes or feature suggestions.
 
----
+
 # License
 This project is licensed under the MIT License.
 
----
+
 # Support
 If you have any questions or need support, feel free to open an issue or contact us at [ocsen.hoc.code@gmail.com].
